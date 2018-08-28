@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8"></meta>
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no"></meta>
+<meta http-equiv="x-ua-compatible" content="ie=edge"></meta>
+<title>Puerta 18</title>
+<!-- Font Awesome -->
+<link rel="stylesheet"
+	href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+	integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+	crossorigin="anonymous" />
+<!-- Bootstrap core CSS -->
+<link href="/css/bootstrap.min.css" rel="stylesheet" />
+<!-- Material Design Bootstrap -->
+<link href="/css/mdb.min.css" rel="stylesheet" />
+<link href="/css/style.css" rel="stylesheet" />
+<!-- Your custom styles (optional) -->
+<link href="/css/style.css" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="/fa/css/fontawesome.css" />
+<link rel="stylesheet" type="text/css" href="/fa/css/fa-brands.css" />
+<link rel="stylesheet" type="text/css" href="/fa/css/fa-regular.css" />
+<link rel="stylesheet" type="text/css" href="/fa/css/fa-solid.css" />
+<script type="text/javascript" src="/wow/wow.js"></script>
+<style type="text/css">
+@media ( min-width : 800px) and (max-width: 850px) {
+	.navbar:not (.top-nav-collapse ) {
+		background: #1C2331 !important;
+	}
+}
+</style>
+
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark primary-color">
+		<!-- Navbar brand -->
+		<a class="navbar-brand" href="/socios/"><img
+			src="https://mdbootstrap.com/img/logo/mdb-transparent.png"
+			height="30" alt=""></a>
+		<!-- Collapse button -->
+		<button class="navbar-toggler" type="button" data-toggle="collapse"data-target="#basicExampleNav" aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<!-- Collapsible content -->
+		<div class="collapse navbar-collapse" id="basicExampleNav">
+			<!-- Links -->
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Soci@s </a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+						<a class="dropdown-item" href="#">Dar de Alta</a> 
+						<a class="dropdown-item" href="#">Presentes</a> 
+						<a class="dropdown-item" href="#">Eliminar</a> 
+						<a class="dropdown-item" href="#">Historial</a>
+					</div>
+				</li>
+				<li class="nav-item">
+				  <a href="/socios/nuevo" class="nav-link">Nuevo Socio</a>
+				</li>
+				<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="http://example.com"
+					id="navbarDropdownMenuLink" data-toggle="dropdown"
+					aria-haspopup="true" aria-expanded="false"> Cursos </a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+						<a class="dropdown-item" href="#">Dar de Alta</a> 
+						<a class="dropdown-item" href="#">Ver todos</a> 
+						<a class="dropdown-item" href="#">Crear Curso</a> 
+						<a class="dropdown-item" href="#">Historial</a>
+					</div>
+				</li>
+				<li class="nav-item">
+                <a href="" class="nav-link" data-toggle="modal" data-target="#modalLoginForm">Iniciar Sesión</a>
+             </li>
+			</ul>
+		</div>
+		<!-- Collapsible content -->
+	</nav>
+
+	<div class="container wow slideInUp  py-5">
+		<div class="flex-center flex-column">
+
+			<img src="/img/puerta03.jpg"
+				class="rounded-circle  tamaño wow fadeOutLeft" data-wow-delay="150ms" alt="placeholder">
+
+			<form th:action="|/socios/modificar/procesar/${id}|">
+						<h3 class="dark-grey-text text-center body"><strong>Modificar</strong> </h3>
+				<div class="md-form">
+					<i class="fa fa-user prefix grey-text"></i> <input
+						th:value="${nombreAnt}" name="nombre" type="text" id="form1"
+						class="form-control"></input> <label for="form1">Nombre</label>
+				</div>
+
+				<div class="md-form">
+					<i class="fa fa-user prefix grey-text"></i> <input
+						th:value="${apellidoAnt}" name="apellido" type="text" id="form2"
+						class="form-control"></input> <label for="form2">Apellido</label>
+				</div>
+
+				<div class="md-form">
+					<i class="fas fa-id-card prefix grey-text"></i> <input
+						th:value="${dniAnt}" name="dni" type="text" id="form3"
+						class="form-control"></input> <label for="form3">Dni</label>
+				</div>
+
+				<div class="md-form">
+					<i class="fa fa-envelope prefix grey-text"></i> <input
+						th:value="${mailAnt}" name="mail" type="text" id="form4"
+						class="form-control"></input> <label for="form4">Correo
+						electronico</label>
+				</div>
+				<div class="text-center">
+					<button type="submit" class="btn btn-default wow  fadeInRight my-2 my-sm-0"
+						data-wow-delay="200ms">Actualizar
+					</button>
+				</div>
+		</form>
+		<!-- Form -->
+	</div>
+	</div>
+	<footer class="page-footer text-center font-small mt-4 wow fadeIn">
+
+		<div class=" footer-copyright py-3 ">
+
+			<i class="fab fa-facebook-square "></i> Donde tu talento es la clave
+			: <a href="http://www.puerta18.org.ar/" target="_blank"> Puerta
+				18!</a>
+		</div>
+
+
+	</footer>
+	<!-- SCRIPTS -->
+	<script src="/wow/wow.js"></script>
+	<script>
+              new WOW().init();
+              </script>
+	<!-- JQuery -->
+	<script type="text/javascript" src="/js/jquery-3.3.1.min.js"></script>
+	<!-- Bootstrap tooltips -->
+	<script type="text/javascript" src="/js/popper.min.js"></script>
+	<!-- Bootstrap core JavaScript -->
+	<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="/js/main.js"></script>
+	<!-- MDB core JavaScript -->
+	<script type="text/javascript" src="/js/mdb.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		crossorigin="anonymous"></script>
+	<script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+	<script src="/assets/js/vendor/popper.min.js"></script>
+	<script src="/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>
