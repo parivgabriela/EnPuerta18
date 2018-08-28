@@ -39,7 +39,7 @@ public class SociosController {
 				env.getProperty("spring.datasource.username"), env.getProperty("spring.datasource.password"));
 
 		PreparedStatement consulta = connection
-				.prepareStatement("SELECT * FROM socios WHERE nombre LIKE ? OR apellido LIKE ? OR dni LIKE ?");
+				.prepareStatement("SELECT * FROM socios WHERE unaccent(lower(nombre)) LIKE unaccent(lower(?)) OR unaccent(lower(apellido)) LIKE unaccent(lower(?)) OR dni LIKE ?");
 		// no agregue en el 3 porque debe ser exacto.
 		consulta.setString(1, "%" + palabraClave + "%");
 		consulta.setString(2, "%" + palabraClave + "%");
