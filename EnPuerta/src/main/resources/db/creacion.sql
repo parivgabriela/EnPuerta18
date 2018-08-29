@@ -16,8 +16,7 @@ WITH (
     OIDS = FALSE
 )
 TABLESPACE pg_default;
-
+    CREATE EXTENSION IF NOT EXISTS unaccent
 ALTER TABLE public.socios
     OWNER to postgres;
     ALTER TABLE 
-    CREATE EXTENSION IF NOT EXISTS unaccent
